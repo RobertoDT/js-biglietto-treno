@@ -16,9 +16,9 @@ var scontoOver = (prezzo * 40) / 100;
 var prezzoOver = prezzo - scontoOver;
 
 if(eta < 18){
-  console.log(prezzoMinorenni);
+  console.log(prezzoMinorenni.toFixed(2));
 } else if (eta >= 65){
-  console.log(prezzoOver);
+  console.log(prezzoOver.toFixed(2));
 } else{
   console.log(prezzo);
 }
