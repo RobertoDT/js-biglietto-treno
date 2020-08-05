@@ -18,7 +18,11 @@ var prezzoMinorenni = prezzo - scontoMinorenni;
 var scontoOver = (prezzo * 40) / 100;
 var prezzoOver = prezzo - scontoOver;
 
-if(eta < 18){
+//controllo fatto all'utente se non ha inserito un numero nei campi richiesti
+if(isNaN(eta) || isNaN(distanza)){
+  alert("Non hai inserito un numero");
+}
+else if(eta < 18){
   console.log(prezzoMinorenni.toFixed(2));
   document.getElementById('prezzoFinale').innerHTML = prezzoMinorenni.toFixed(2);
 } else if (eta >= 65){
